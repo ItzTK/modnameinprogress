@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "modnameinprogress",
+	"version": "${version}",
+	"name": "ModNameInprogress",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/modnameinprogress/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.itztk.modnameinprogress.ModNameInprogress"
+		],
+		"client": [
+			"com.itztk.modnameinprogress.ModNameInProgressClient"
+		]
+	},
+	"mixins": [
+		"modnameinprogress.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
