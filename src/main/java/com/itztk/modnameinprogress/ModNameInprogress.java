@@ -1,5 +1,6 @@
 package com.itztk.modnameinprogress;
 
+import com.itztk.modnameinprogress.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -15,8 +16,9 @@ public class ModNameInprogress implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("Mod Name In Progress, in progress");
+		ModItems.initalize();
 
-		LOGGER.info("Hello Fabric world!");
 	}
 
 	public static ResourceLocation id(String path) {
