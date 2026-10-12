@@ -1,5 +1,6 @@
 package com.itztk.modnameinprogress;
 
+import com.itztk.modnameinprogress.effect.ModEffects;
 import com.itztk.modnameinprogress.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -18,7 +19,7 @@ public class ModNameInprogress implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Mod Name In Progress, in progress");
 		ModItems.initalize();
-
+		ModEffects.initalize();
 	}
 
 	public static ResourceLocation id(String path) {

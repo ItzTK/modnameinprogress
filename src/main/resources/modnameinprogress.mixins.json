@@ -3,7 +3,8 @@
 	"package": "com.itztk.modnameinprogress.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"StasisMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

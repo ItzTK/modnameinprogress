@@ -11,7 +11,6 @@ import net.minecraft.world.item.Item;
 public class ModItems {
     public static Item register(Item item, String id) {
         ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(ModNameInprogress.MOD_ID, id);
-
         Item registeredItem = Registry.register(BuiltInRegistries.ITEM, itemID, item);
         return registeredItem;
     }

@@ -1,8 +1,11 @@
 package com.itztk.modnameinprogress.item;
 
+import com.itztk.modnameinprogress.ModNameInprogress;
+import com.itztk.modnameinprogress.effect.ModEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
@@ -21,13 +24,8 @@ public class StasisItem extends Item {
             return InteractionResultHolder.pass(user.getItemInHand(hand));
         }
 
-
-        BlockPos frontOfPlayer = user.blockPosition().relative(user.getDirection(), 10);
-
-        // Spawn the lightning bolt.
-        LightningBolt lightningBolt = new LightningBolt(EntityType.LIGHTNING_BOLT, world);
-        lightningBolt.setPos(frontOfPlayer.getCenter());
-        world.addFreshEntity(lightningBolt);
+        var instance = new MobEffectInstance(ModEffects.STASIS, 5 * 20,0, false, true, true);
+        user.addEffect(instance);
 
 
         return InteractionResultHolder.success(user.getItemInHand(hand));
